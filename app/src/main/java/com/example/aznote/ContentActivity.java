@@ -2,18 +2,19 @@ package com.example.aznote;
 
 
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.cardview.widget.CardView;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 
 import android.os.Bundle;
 import android.view.View;
+
 
 public class ContentActivity extends AppCompatActivity {
 
@@ -25,6 +26,8 @@ public class ContentActivity extends AppCompatActivity {
 
 
 
+
+    @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +42,6 @@ public class ContentActivity extends AppCompatActivity {
         img_facebook = findViewById(R.id.img_facebook);
         img_twitter = findViewById(R.id.img_twitter);
         img_linkein = findViewById(R.id.img_linkein);
-
 
 
 

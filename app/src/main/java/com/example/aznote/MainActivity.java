@@ -1,9 +1,11 @@
 package com.example.aznote;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -72,7 +74,31 @@ public class MainActivity extends AppCompatActivity {
 
             case R.id.item_exit:
 
-                finishAffinity();
+
+                // finishAffinity();
+
+                AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
+
+                alert.setTitle(R.string.exit);
+                alert.setMessage(R.string.exit_message);
+                alert.setIcon(R.drawable.ic_baseline_delete_24);
+
+                alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+
+                alert.show();
+
 
 
                 break;

@@ -15,5 +15,6 @@
     <string name="select_language">Select language</string>
     <string name="english">English</string>
     <string name="persian">Persian</string>
+    <string name="exit_message">Are you sure to exit?</string>
 
 </resources>
