@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+
+    <item
+        android:id="@+id/item_select_language"
+        android:title="@string/select_language"
+        app:showAsAction="never"
+        >
+        <menu>
+
+            <item
+                android:id="@+id/item_english"
+                android:title="@string/english"
+                />
+            <item
+                android:id="@+id/item_persian"
+                android:title="@string/persian"
+                />
+
+
+        </menu>
+
+
+
+    </item>
+
+
+    <item
+        android:id="@+id/item_backup"
+        android:title="@string/backup"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/item_backup_note"
+                android:title="@string/backup_notes"
+                />
+            <item
+                android:id="@+id/item_restore_note"
+                android:title="@string/restore_backup"
+                />
+        </menu>
+
+    </item>
+
+
+
+
+    <item
+        android:id="@+id/item_rate_app"
+        android:title="@string/rate_app"
+
+        />
+
+    <item
+        android:id="@+id/item_about_app"
+        android:title="@string/about_us"
+
+        />
+
+    <item
+        android:id="@+id/item_exit"
+        android:title="@string/exit"
+
+        />
+
+
+
+
+
+</menu>

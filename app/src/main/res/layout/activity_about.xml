@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/about_us"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20"
+                android:layout_centerVertical="true"
+                />
+
+
+        </RelativeLayout>
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:id="@+id/bz_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="@dimen/margin_50"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/bz_note_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/bz_note"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_20"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bz_linear"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/version_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/version_1_0_0"
+            android:gravity="center"
+            android:textSize="@dimen/font_size_15"
+            android:textColor="@color/purple_700"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_10"
+            />
+
+
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="@dimen/width_150"
+        android:layout_height="@dimen/height_150"
+        android:layout_centerInParent="true"
+        app:cardElevation="@dimen/elevation_10"
+        app:cardMaxElevation="@dimen/max_elevation_12"
+        app:cardCornerRadius="@dimen/radius_20"
+        app:cardPreventCornerOverlap="true"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/cover_note"
+            android:layout_margin="@dimen/margin_5"
+            android:contentDescription="@string/click_on"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/click_on_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/click_on"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginTop="@dimen/margin_10"
+            android:textSize="@dimen/font_size_15"
+            android:textStyle="bold"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/developed_behrad_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_50"
+        android:gravity="center"
+        android:text="@string/developed_by_behrad_tech"
+        android:textSize="@dimen/font_size_18"
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

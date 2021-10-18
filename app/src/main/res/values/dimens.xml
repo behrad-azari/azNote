@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_15">15dp</dimen>
+    <dimen name="fab_size_35">35dp</dimen>
+    <dimen name="font_size_20">20sp</dimen>
+    <dimen name="margin_50">50dp</dimen>
+    <dimen name="font_size_15">15sp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="width_150">150dp</dimen>
+    <dimen name="height_150">150dp</dimen>
+    <dimen name="radius_20">20dp</dimen>
+    <dimen name="elevation_10">10dp</dimen>
+    <dimen name="max_elevation_12">12dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="width_350">350dp</dimen>
+    <dimen name="font_size_18">18sp</dimen>
+
+</resources>

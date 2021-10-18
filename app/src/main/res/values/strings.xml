@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Az Note</string>
+    <string name="rate_app">Rate This App</string>
+    <string name="about_us">About us</string>
+    <string name="exit">Exit</string>
+    <string name="bz_note">BZ NOTE</string>
+    <string name="version_1_0_0">version 1.0.0</string>
+    <string name="click_on">Click on</string>
+    <string name="developed_by_behrad_tech">Developed by Behrad.tech</string>
+    <string name="contact_us">Contact us</string>
+    <string name="bz_note_des">The Bz Note app is a free app, developed by Behrad.tech \n This program is being developed, so if you have any suggestions or criticisms, be sure to share them with us through the following communication channels.\n We sincerely use the comments in the next versions.</string>
+    <string name="backup">Backup</string>
+    <string name="backup_notes">Backup Notes</string>
+    <string name="restore_backup">Restore Backup</string>
+    <string name="select_language">Select language</string>
+    <string name="english">English</string>
+    <string name="persian">Persian</string>
+
+</resources>
