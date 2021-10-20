@@ -12,7 +12,7 @@ import android.view.View;
 public class AboutActivity extends AppCompatActivity {
 
     AppCompatTextView bz_note_txt , version_txt , click_on_txt , developed_behrad_txt;
-    AppCompatImageView img_note;
+    AppCompatImageView img_note , img_back;
     CardView card_view;
 
 
@@ -27,6 +27,7 @@ public class AboutActivity extends AppCompatActivity {
         developed_behrad_txt = findViewById(R.id.developed_behrad_txt);
 
         img_note = findViewById(R.id.img_note);
+        img_back = findViewById(R.id.img_back);
         card_view = findViewById(R.id.card_view);
 
 
@@ -42,6 +43,13 @@ public class AboutActivity extends AppCompatActivity {
 
 
 
+            }
+        });
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

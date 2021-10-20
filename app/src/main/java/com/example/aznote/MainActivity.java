@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     boolean singleBack  = false;
 
 
-    FloatingActionButton floatingActionButton;
+    FloatingActionButton fan_main;
     Toolbar toolbar;
 
     @Override
@@ -33,10 +34,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        floatingActionButton = findViewById(R.id.fab_main);
+        fan_main = findViewById(R.id.fab_main);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
+
+
+        fan_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(),AddActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 
@@ -144,10 +156,6 @@ public class MainActivity extends AppCompatActivity {
 
         //super.onBackPressed();
     }
-
-
-
-
 
 
 

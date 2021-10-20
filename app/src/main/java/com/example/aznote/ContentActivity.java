@@ -20,7 +20,7 @@ public class ContentActivity extends AppCompatActivity {
 
 
     AppCompatTextView bz_note_txt , bz_note ;
-    AppCompatImageView img_email , img_facebook , img_twitter , img_linkein;
+    AppCompatImageView img_email , img_facebook , img_twitter , img_linkein , img_back;
     CardView card_view;
 
 
@@ -42,6 +42,7 @@ public class ContentActivity extends AppCompatActivity {
         img_facebook = findViewById(R.id.img_facebook);
         img_twitter = findViewById(R.id.img_twitter);
         img_linkein = findViewById(R.id.img_linkein);
+        img_back = findViewById(R.id.img_back);
 
 
 
@@ -87,6 +88,14 @@ public class ContentActivity extends AppCompatActivity {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/behrad-azari-5058/")));
 
 
+            }
+        });
+
+
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
 

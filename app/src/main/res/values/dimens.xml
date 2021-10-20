@@ -15,5 +15,7 @@
     <dimen name="margin_20">20dp</dimen>
     <dimen name="width_350">350dp</dimen>
     <dimen name="font_size_18">18sp</dimen>
+    <dimen name="margin_30">30dp</dimen>
+    <dimen name="box_stroke_1">1dp</dimen>
 
 </resources>

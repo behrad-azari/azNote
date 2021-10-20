@@ -57,24 +57,52 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_title">
+            app:startIconDrawable="@drawable/ic_baseline_title_24"
+            android:hint="@string/enter_title"
+
+            app:boxStrokeColor="@color/blue_light"
+            app:boxStrokeWidthFocused="@dimen/box_stroke_1"
 
 
-            <androidx.appcompat.widget.AppCompatEditText
+
+
+            app:hintTextColor="@color/blue_light"
+
+
+            app:helperTextEnabled="true"
+            app:helperText="@string/title"
+
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
+
+            android:hint="@string/enter_title"
+            >
+
+
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="30"
+
+
+
+
+
                 />
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_description"
             android:layout_marginTop="@dimen/margin_20"
+
+            app:boxStrokeWidthFocused="@dimen/box_stroke_1"
+            app:boxStrokeColor="@color/blue_light"
+            app:hintTextColor="@color/blue_light"
             >
             <androidx.appcompat.widget.AppCompatEditText
                 android:layout_width="match_parent"
@@ -84,8 +112,6 @@
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
 
 

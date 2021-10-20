@@ -11,7 +11,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_500"
+        android:background="@color/blue_light"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -25,6 +25,17 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_20"
                 android:layout_centerVertical="true"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                app:srcCompat="@drawable/ic_baseline_arrow_forward_24"
+                tools:ignore="VectorDrawableCompat"
                 />
 
 

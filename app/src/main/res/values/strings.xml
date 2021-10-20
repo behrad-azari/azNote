@@ -16,5 +16,14 @@
     <string name="english">English</string>
     <string name="persian">Persian</string>
     <string name="exit_message">Are you sure to exit?</string>
+    <string name="add_note">Add Note</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="todo">TODO</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_description">Enter Description</string>
+    <string name="set_date">Set Date</string>
+    <string name="set_time">Set Time</string>
+    <string name="save">Save Note</string>
+    <string name="title">Title *</string>
 
 </resources>
