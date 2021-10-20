@@ -97,7 +97,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/cover_note"
+            android:src="@drawable/cover_aznoot"
             android:layout_margin="@dimen/margin_5"
             android:contentDescription="@string/click_on"/>
 
@@ -126,19 +126,6 @@
         android:textSize="@dimen/font_size_18"
 
         />
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

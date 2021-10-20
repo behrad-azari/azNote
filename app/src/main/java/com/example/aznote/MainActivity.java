@@ -13,6 +13,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item_exit:
 
 
-                // finishAffinity();
+
 
                 AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity.this);
 
@@ -87,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
+                        finishAffinity();
+
                     }
                 });
 
@@ -97,7 +100,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+
                 alert.show();
+
 
 
 
