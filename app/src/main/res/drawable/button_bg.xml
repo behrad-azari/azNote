@@ -8,7 +8,7 @@
         android:color="@color/blue_light"
         />
     <corners
-        android:radius="@dimen/margin_5"
+        android:radius="@dimen/margin_8"
         />
 
 

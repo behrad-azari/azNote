@@ -26,7 +26,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_20"
                 android:layout_centerVertical="true"
-                />
+                tools:ignore="RelativeOverlap" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_back"
@@ -57,35 +57,52 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/enter_title">
+            app:startIconDrawable="@drawable/ic_baseline_title_24"
+            android:hint="@string/enter_title"
+            app:boxStrokeColor="@color/blue_light"
+            app:boxStrokeWidthFocused="@dimen/box_stroke_1"
+
+            app:hintTextColor="@color/blue_light"
+
+            app:helperTextEnabled="true"
+            app:helperText="@string/title"
+
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            tools:ignore="ExtraText">
+            android:hint="@string/enter_title"
+            >
 
 
-            <androidx.appcompat.widget.AppCompatEditText
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:maxLength="30"
+
                 />
 
-
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_description"
             android:layout_marginTop="@dimen/margin_20"
+            app:boxStrokeWidthFocused="@dimen/box_stroke_1"
+            app:boxStrokeColor="@color/blue_light"
+            app:hintTextColor="@color/blue_light"
             >
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edt_description"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/height_250"
 
                 />
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
 
 
 
@@ -93,7 +110,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_5">
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_date"
@@ -121,10 +139,7 @@
                 />
 
 
-
         </LinearLayout>
-
-
 
     </LinearLayout>
 
@@ -133,16 +148,15 @@
         android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_marginBottom="@dimen/margin_30"
+        android:background="@drawable/button_bg"
         android:text="@string/save"
-        android:textStyle="bold"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:background="@drawable/button_bg"
-        android:layout_alignParentBottom="true"
-        android:layout_marginRight="@dimen/margin_20"
-        android:layout_marginLeft="@dimen/margin_20"
-        android:layout_marginBottom="@dimen/margin_30"
-        />
+        android:textStyle="bold" />
 
 
 

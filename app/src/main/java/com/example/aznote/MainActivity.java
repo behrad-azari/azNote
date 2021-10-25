@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     boolean singleBack  = false;
 
 
-    FloatingActionButton fan_main;
+    FloatingActionButton fab_main;
     Toolbar toolbar;
 
     @Override
@@ -34,13 +34,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        fan_main = findViewById(R.id.fab_main);
+        fab_main = findViewById(R.id.fab_main);
         toolbar = findViewById(R.id.toolbar);
 
         setSupportActionBar(toolbar);
 
 
-        fan_main.setOnClickListener(new View.OnClickListener() {
+        fab_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
