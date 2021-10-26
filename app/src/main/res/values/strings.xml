@@ -25,5 +25,7 @@
     <string name="set_time">Set Time</string>
     <string name="save">Save Note</string>
     <string name="title">Title *</string>
+    <string name="added_nte">Note added Successfully</string>
+    <string name="empty_note">Empty Note</string>
 
 </resources>

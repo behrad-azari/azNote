@@ -55,18 +55,16 @@
         >
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_textinput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:startIconDrawable="@drawable/ic_baseline_title_24"
             android:hint="@string/enter_title"
             app:boxStrokeColor="@color/blue_light"
             app:boxStrokeWidthFocused="@dimen/box_stroke_1"
-
             app:hintTextColor="@color/blue_light"
-
             app:helperTextEnabled="true"
             app:helperText="@string/title"
-
             app:counterEnabled="true"
             app:counterMaxLength="30"
             tools:ignore="ExtraText">
@@ -74,18 +72,18 @@
             >
 
 
-            <com.google.android.material.textfield.TextInputEditText
+            <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/edt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:maxLength="30"
-
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edt_textinput2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_description"
@@ -94,6 +92,7 @@
             app:boxStrokeColor="@color/blue_light"
             app:hintTextColor="@color/blue_light"
             >
+
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/edt_description"
                 android:layout_width="match_parent"

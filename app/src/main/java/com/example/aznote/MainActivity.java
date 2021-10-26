@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.aznote.database.NoteDatabase;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     FloatingActionButton fab_main;
     Toolbar toolbar;
+    NoteDatabase noteDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
 
         fab_main = findViewById(R.id.fab_main);
         toolbar = findViewById(R.id.toolbar);
+
+        noteDatabase = new NoteDatabase(getApplicationContext());
 
         setSupportActionBar(toolbar);
 
