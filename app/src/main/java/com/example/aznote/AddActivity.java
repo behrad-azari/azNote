@@ -13,7 +13,6 @@ import android.widget.TimePicker;
 import com.example.aznote.database.NoteDBAdapter;
 import com.example.aznote.models.Note;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.Calendar;
@@ -50,9 +49,6 @@ public class AddActivity extends AppCompatActivity {
         noteDBAdapter = new NoteDBAdapter(getApplicationContext());
 
          calendar = Calendar.getInstance();
-
-
-
 
 
 

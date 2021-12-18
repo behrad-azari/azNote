@@ -2,11 +2,16 @@ package com.example.aznote.database;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
 import com.example.aznote.models.Note;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class NoteDBAdapter extends NoteDatabase {
 
@@ -37,6 +42,43 @@ public class NoteDBAdapter extends NoteDatabase {
 
 
     }
+
+
+    public  List<String> getTitles(){
+
+        List<String> titles = new ArrayList<>();
+
+        ArrayList<String> titles2 = new ArrayList<>();
+
+
+
+        SQLiteDatabase db = getReadableDatabase();
+       Cursor cursor = db.rawQuery("select * from "+NoteDatabase.TABLE_NOTE , null );
+
+
+       while (cursor.moveToNext()){
+
+        int id = cursor.getInt(0);
+        String title = cursor.getString(1) + " "+ cursor.getString(cursor.getColumnIndex("description"));
+
+        String date = cursor.getString(cursor.getColumnIndex("dateCreate"));
+
+        date = cursor.getString(4);
+
+        titles.add(title);
+
+       }
+
+
+
+        return titles;
+
+
+    }
+
+
+
+
 
 
 

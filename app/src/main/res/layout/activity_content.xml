@@ -27,7 +27,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_20"
                 android:layout_centerVertical="true"
-                />
+                tools:ignore="RelativeOverlap" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/img_back"

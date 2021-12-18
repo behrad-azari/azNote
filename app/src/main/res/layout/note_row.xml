@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/Height_100"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/lbl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text: "
+                android:textColor="@color/blue_light"
+                android:layout_margin="@dimen/margin_10"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_toEndOf="@id/lbl_title"
+                />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/blue_light"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_5"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt_time"
+                android:textColor="@color/blue_light"
+                android:layout_centerVertical="true"
+                android:layout_margin="@dimen/margin_5"
+                />
+
+
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_delete_24"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/margin_10"
+                tools:ignore="VectorDrawableCompat"
+                android:tint="@color/blue_light"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/img_delete"
+                app:srcCompat="@drawable/ic_baseline_share_24"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_10"
+                tools:ignore="VectorDrawableCompat"
+                android:tint="@color/blue_light"
+                />
+
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

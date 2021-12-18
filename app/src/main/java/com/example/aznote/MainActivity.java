@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,11 +15,14 @@ import android.os.Looper;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Toast;
-
+import com.example.aznote.database.NoteDBAdapter;
 import com.example.aznote.database.NoteDatabase;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton fab_main;
     Toolbar toolbar;
     NoteDatabase noteDatabase;
+    ListView lst_note;
+
+    NoteDBAdapter noteDBAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,24 +45,36 @@ public class MainActivity extends AppCompatActivity {
 
         fab_main = findViewById(R.id.fab_main);
         toolbar = findViewById(R.id.toolbar);
+        lst_note = findViewById(R.id.lst_note);
+
 
         noteDatabase = new NoteDatabase(getApplicationContext());
+
+        noteDBAdapter = new NoteDBAdapter(getApplicationContext());
 
         setSupportActionBar(toolbar);
 
 
-        fab_main.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        fab_main.setOnClickListener(v -> {
 
-                Intent intent = new Intent(getApplicationContext(),AddActivity.class);
-                startActivity(intent);
-            }
+            Intent intent = new Intent(getApplicationContext(),AddActivity.class);
+            startActivity(intent);
         });
+
 
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        List<String> names =  noteDBAdapter.getTitles();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getApplicationContext() , android.R.layout.simple_list_item_1);
+
+        lst_note.setAdapter(adapter);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -68,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -100,20 +120,10 @@ public class MainActivity extends AppCompatActivity {
                 alert.setMessage(R.string.exit_message);
                 alert.setIcon(R.drawable.ic_baseline_delete_24);
 
-                alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
+                alert.setPositiveButton("Yes", (dialog, which) -> finishAffinity());
 
-                        finishAffinity();
+                alert.setNegativeButton("No", (dialog, which) -> {
 
-                    }
-                });
-
-                alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-
-                    }
                 });
 
 
@@ -147,13 +157,7 @@ public class MainActivity extends AppCompatActivity {
         this.singleBack  = true;
         Toast.makeText(this, "Double Back to exit", Toast.LENGTH_SHORT).show();
 
-        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                singleBack =false;
-            }
-        }, 2000);
+        new Handler(Looper.getMainLooper()).postDelayed(() -> singleBack =false, 2000);
 
 
 

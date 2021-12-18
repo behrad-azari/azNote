@@ -24,9 +24,6 @@ public class ContentActivity extends AppCompatActivity {
     CardView card_view;
 
 
-
-
-
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {

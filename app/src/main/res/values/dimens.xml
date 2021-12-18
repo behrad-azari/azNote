@@ -19,5 +19,6 @@
     <dimen name="box_stroke_1">1dp</dimen>
     <dimen name="height_250">250dp</dimen>
     <dimen name="margin_8">8dp</dimen>
+    <dimen name="Height_100">100dp</dimen>
 
 </resources>
